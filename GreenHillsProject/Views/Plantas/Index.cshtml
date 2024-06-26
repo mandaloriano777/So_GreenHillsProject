@@ -1,0 +1,57 @@
+﻿@model IEnumerable<GreenHillsProject.Models.Plantas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeComum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCientifico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TempRecomendada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UmidRecomendada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LumiRecomendada)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeComum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeCientifico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TempRecomendada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UmidRecomendada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LumiRecomendada)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

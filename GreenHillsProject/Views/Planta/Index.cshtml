@@ -1,0 +1,57 @@
+﻿@model IEnumerable<GreenHillsProject.Models.Planta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeComum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeCientifico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TemperaturaRec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UmidadeRec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LuminosidadeRec)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeComum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeCientifico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TemperaturaRec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UmidadeRec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LuminosidadeRec)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = (Model as List<GreenHillsProject.Models.Planta>).IndexOf(item) }) |
+            @Html.ActionLink("Details", "Details", new { id = (Model as List<GreenHillsProject.Models.Planta>).IndexOf(item) }) |
+            @Html.ActionLink("Delete", "Delete", new { id = (Model as List<GreenHillsProject.Models.Planta>).IndexOf(item) }) 
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,64 @@
+﻿@model GreenHillsProject.Models.Planta
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Planta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeComum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeComum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeCientifico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeCientifico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TemperaturaRec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TemperaturaRec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UmidadeRec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UmidadeRec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LuminosidadeRec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LuminosidadeRec)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

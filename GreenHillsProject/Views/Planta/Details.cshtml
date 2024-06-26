@@ -1,0 +1,58 @@
+﻿@model GreenHillsProject.Models.Planta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Planta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeComum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeComum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeCientifico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeCientifico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TemperaturaRec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TemperaturaRec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UmidadeRec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UmidadeRec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LuminosidadeRec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LuminosidadeRec)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
